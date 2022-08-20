@@ -15,6 +15,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 200px 200px 200px;
+	gap: 20px;
 }
 
 .img {
@@ -22,26 +23,45 @@ body {
 }
 
 .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
+	border: 1px solid rgba(144, 238, 144, 0.5);
+	border-radius: 10px;
 }
 
 .item:hover {
 	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	border-color: lightgreen;
 	transition: all 0.5s;
 }
 
-.item:hover img {
+.item img {
+	display: flex;
+	width: 100%;
+	height: 125px;
+	object-fit: cover;
+
+}
+.item:hover img,
+.item:focus img {
 	animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 .btn {
 	display: inline-block;
+	display: block;
+	margin-top: auto;
+	margin-bottom: 30px;
+	width: 100%;
 	padding: 10px 20px;
 	border: none;
 	background: rgb(248, 168, 24);
 	border-radius: 10px;
 	color: #fff;
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: 700;
 
 	transition: background .2s linear;
@@ -55,6 +75,14 @@ body {
 	text-align: center;
 }
 
+/*
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+*/
 
 @-webkit-keyframes flip-vertical-fwd {
 	0% {
