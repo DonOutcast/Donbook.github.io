@@ -70,7 +70,7 @@ btn5.addEventListener("click", function(){
 	}
 });
 
-btn5.addEventListener("click", function(){
+btn6.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
